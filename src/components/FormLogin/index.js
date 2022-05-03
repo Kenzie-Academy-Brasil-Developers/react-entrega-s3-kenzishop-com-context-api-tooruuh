@@ -2,8 +2,6 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FormContainer } from "./styles";
-import { useDispatch } from "react-redux";
-import { signInThunk } from "../../store/modules/user/thunks";
 import { useHistory } from "react-router-dom";
 
 export default function Form() {
@@ -13,27 +11,18 @@ export default function Form() {
         password: yup.string().required('Senha obrigatorio')
     })
 
-    const dispatch = useDispatch()
-
     const history = useHistory()
 
-    const { register, handleSubmit, formState: { errors } } = useForm({
+    const { register, formState: { errors } } = useForm({
         resolver: yupResolver(formSchema)
     });
 
-    const token = {token: '123456789'}
-
-    const onSubmitFunction = (data) => {
-        dispatch( signInThunk({...data, ...token}))
-    }
-
     return (
 
-        <FormContainer onSubmit={handleSubmit(onSubmitFunction)}>
+        <FormContainer>
             <h1>Kenzie Shop</h1>
             <h3>Login</h3>
             <span>
-
 
                 <input placeholder='Nome de usuário' {...register('username')} />
                 <p>{errors.username?.message}</p>

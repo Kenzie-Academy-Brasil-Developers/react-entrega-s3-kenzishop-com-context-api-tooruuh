@@ -6,23 +6,35 @@ export const NoProductCart = styled.div`
   align-items: center;
   margin-top: 30px;
 
-  h1 {
+  button {
+     border: none;
+     width: 250px;
+     height: 40px;
+     margin: 20px 0 25px 0;
+     border-radius: 8px;
+     background-color: var(--pink);
+     color: var(--white);
+    }
+  button:hover{
+    background-color: var(--pinkHover);
+  }
+  
+  @media(max-width: 930px){
+    width: 80%;
+    margin: 30px auto;
 
+    h1{
+      font-size: 20px;
+    }
   }
 
-  button {
-      border: none;
-      width: 250px;
-      height: 40px;
-      margin: 20px 0 25px 0;
-      border-radius: 8px;
-      background-color: var(--pink);
-      color: var(--white);
+  @media(max-width: 575px){
+
+    h1{
+      font-size: 18px;
+      margin: 5px;
     }
-    button:hover{
-      background-color: var(--pinkHover);
-    }
-  
+  }
 `
 
 export const Container = styled.div`
@@ -87,6 +99,48 @@ export const Container = styled.div`
       background-color: var(--pinkHover);
     }
   }
+
+  @media(max-width: 1800px){
+      max-width: 1500px;
+      height: 260px;
+      margin-left: 5%;
+
+      ul {
+        height: 100%;
+        justify-content: center;
+        margin-top: 50px;
+        overflow-x: scroll;
+      }
+
+      li {
+        width: 500px;
+        justify-content: center;
+      }
+    }
+
+    @media(max-width: 1600px){
+      max-width: 1200px;
+      height: 260px;
+      margin-left: 5%;
+    }
+
+    @media(max-width: 1285px){
+      max-width: 900px;
+      height: 260px;
+      margin-left: 5%;
+    }
+
+    @media(max-width: 975px){
+      max-width: 500px;
+      height: 260px;
+      margin-left: 5%;
+    }
+
+    @media(max-width: 555px){
+      max-width: 350px;
+      height: 260px;
+      margin-left: 5%;
+    }
 `
 
 export const Price = styled.h4`
@@ -110,6 +164,16 @@ export const ResumPrice = styled.div`
         height: 3px;
         margin: 15px auto;
     }
+
+    @media(max-width: 1800px){
+      left: 5%;
+      top: 50%;
+    }
+
+    @media(max-width: 555px){
+      width: 350px;
+    }
+
 `
 
 export const ContentPrice = styled.div`
@@ -127,6 +191,9 @@ export const ContentPrice = styled.div`
         margin: 5px;
     }
 
+    @media(max-width: 555px){
+      margin: 20px 0 0 70px;
+    }
 `
 
 export const ContentButton = styled.div`

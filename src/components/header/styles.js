@@ -48,6 +48,14 @@ export const Container = styled.header`
     h1{
       font-size: 20px;
     }
+
+    div{
+      margin-right: 5%;
+    }
+
+    button {
+      width: 120px;
+    }
   }
 `
 
@@ -81,11 +89,15 @@ export const CartCount = styled.span`
     right: 275px;
   }
 
+  @media(max-width: 565px){
+    right: 240px;
+  }
+
   @media(max-width: 400px){
     right: 255px;
   }
 
-  @media(max-width: 380px){
-    right: 245px;
+  @media(max-width: 3950px){
+    right: 235px;
   }
 `

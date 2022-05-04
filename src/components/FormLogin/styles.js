@@ -69,4 +69,20 @@ export const FormContainer = styled.form`
     button:hover{
         filter: brightness(0.9);
     }
+
+    @media(max-width: 450px){
+        max-width: 280px;
+
+        h1{
+            font-size: 1.4rem;
+        }
+
+        h3 {
+            top: 4%;
+        }
+
+        span {
+            width: 260px;
+        }
+    }
 `

@@ -108,7 +108,7 @@ export const Container = styled.div`
       ul {
         height: 100%;
         justify-content: center;
-        margin-top: 50px;
+        margin-top: 10px;
         overflow-x: scroll;
       }
 
@@ -166,12 +166,12 @@ export const ResumPrice = styled.div`
     }
 
     @media(max-width: 1800px){
-      left: 5%;
-      top: 50%;
+      left: 6%;
+      top: 54%;
     }
 
     @media(max-width: 555px){
-      width: 350px;
+      width: 330px;
     }
 
 `
